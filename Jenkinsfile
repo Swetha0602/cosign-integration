@@ -23,8 +23,8 @@ pipeline {
         }
         stage('Sign and Verify image with Cosign'){
             steps{
-                sh 'cosign sign --key $COSIGN_PRIVATE_KEY docker.io/IMAGE_NAME:IMAGE_VERSION'
-                sh 'cosign verify --key $COSIGN_PUBLIC_KEY docker.io/IMAGE_NAME:IMAGE_VERSION'
+                sh 'cosign sign --key $COSIGN_PRIVATE_KEY docker.io/$IMAGE_NAME:$IMAGE_VERSION'
+                sh 'cosign verify --key $COSIGN_PUBLIC_KEY docker.io/$IMAGE_NAME:$IMAGE_VERSION'
                 echo 'Image signed successfully'
             }
         }
