@@ -7,7 +7,6 @@ pipeline {
         COSIGN_PASSWORD=credentials('cosign-password')
         COSIGN_PRIVATE_KEY=credentials('cosign-private-key')
         COSIGN_PUBLIC_KEY=credentials('cosign-public-key')
-        DOCKERHUB_CREDS=credentials('dockerhub-creds')
     }
     stages {
          stage('Verify Cosign') {
