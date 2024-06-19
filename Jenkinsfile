@@ -4,6 +4,7 @@ pipeline {
         GITHUB_CREDS=credentials('Github_creds')
         IMAGE_NAME='sriswetha06/sample-cosign'
         IMAGE_VERSION='v2'
+        DOCKERHUB_CREDS=credentials('dockerhub-creds')
         COSIGN_PASSWORD=credentials('cosign-password')
         COSIGN_PRIVATE_KEY=credentials('cosign-private-key')
         COSIGN_PUBLIC_KEY=credentials('cosign-public-key')
